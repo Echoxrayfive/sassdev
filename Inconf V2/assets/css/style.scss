@@ -1,0 +1,159 @@
+/* Core Colours */
+
+$colors: (
+    primary: #2eaaaf,
+    secondary: #161D1E,
+    darker: #279094,
+    light: #ffffff,
+    heading1: #333333,
+    heading2: #666666,
+    paragraph: #666666,
+    linkhover: #d1d1d1,   
+);
+
+/* Core Gradients */
+@import "gradients.scss";
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Breakpoints */
+@import "breakpoints.scss";
+
+/* Grid */
+@import "grid.scss";
+
+/* Video Scaling */
+
+@import "videoscaling.scss";
+
+/* Core */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
+    background-color: map-get($colors, primary);
+    margin: 0;
+
+    header {
+        background-color: map-get($colors, darker);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:30px 5%;
+        position: relative;
+    }
+
+    li, a, button {
+        font-weight: 400;
+        font-size: 15px;
+        text-decoration: none;
+        color: map-get($colors, light);
+    }
+
+    .logo {
+        cursor: pointer;
+        max-width: 180px;
+    }
+
+    .nav__links {
+        list-style: none;
+
+        li {
+            display:inline-block;
+            padding: 0px 12px;
+
+            a {
+                transition: all 0.3s ease-in-out 0s;
+            }
+
+            a:hover {
+                color: map-get($colors, linkhover)
+            }
+
+        @include media('<=tablet'){
+            display: none;
+        }
+
+        }
+
+    }
+
+    .lobbyvideo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:30px 10%;
+
+        @include media('<=tablet'){
+            padding:0 0%;
+        }
+    }
+
+    .live-presentation {
+        position: relative;
+
+        .live-badge {
+            font-size: 14px;
+            z-index: 9998;
+            padding: 10px 24px;
+            background: linear-gradient(270deg, #ff0000, #ff6300, #ff0089);
+            background-size: 600% 600%;        
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+
+            .rings {
+                width:34px;
+                height: auto;
+                margin-left: -19px;
+                margin-top:-7px;
+                margin-bottom: -11px;
+            }
+
+
+        }
+        
+        @-webkit-keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @-moz-keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @keyframes AnimationName {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+
+    }
+
+    .live-badge, .next-badge {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        padding: 1px 12px;
+        font-size: 11px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        border-radius: 100px;
+        background-color: #DC395F;
+        color: #fff;
+        z-index: 100;
+    }
+
+}
+

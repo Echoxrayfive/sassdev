@@ -1,0 +1,44 @@
+.bg-gradient-inconfheader {
+  background: linear-gradient(135deg, #279094 0%, #1c8387 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, #F2CD48 0%, #FD803F 100%);
+}
+
+.bg-gradient-hot {
+  background: linear-gradient(135deg, #ff9239 0%, #ff0000 100%);
+}
+
+.bg-gradient-cold {
+  background: linear-gradient(135deg, #8019C6 0%, #2F93CC 100%);
+}
+
+.text-gradient-inconfheader {
+  background-image: linear-gradient(135deg, #279094 0%, #1c8387 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-gradient-warm {
+  background-image: linear-gradient(135deg, #F2CD48 0%, #FD803F 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-gradient-hot {
+  background-image: linear-gradient(135deg, #ff9239 0%, #ff0000 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-gradient-cold {
+  background-image: linear-gradient(135deg, #8019C6 0%, #2F93CC 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+/*# sourceMappingURL=gradients.css.map */
